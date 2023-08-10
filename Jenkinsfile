@@ -14,7 +14,7 @@ pipeline {
                     python3 -m venv myvenv
                     source myvenv/bin/activate
                     pip3 install -r requirements.txt
-                    cp ../../jenkins/workspace/ansible-project/ansible/files/app/.env issue_tracker/.env
+                    cp ~/workspace/ansible-project/ansible/files/app/.env issue_tracker/.env
                     python3 manage.py test
                 '''
             }
