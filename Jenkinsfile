@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('Build') {
             steps {
-                git branch: 'main' , url: 'git@github.com:AndreasK45/HUA-DIT-DevOps-WebApp-Issue-Tracker.git' 
+                git branch: 'main' , url: 'git@github.com:AndreasK45/Issue-Tracker.git' 
             }
         }
 
