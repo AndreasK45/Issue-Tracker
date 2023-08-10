@@ -13,7 +13,7 @@ pipeline {
                 sh '''
                     python3 -m venv myvenv
                     source myvenv/bin/activate
-                    sudo easy_install <pasgiref>
+                    pip3 install -r requirements.txt
                     cp ../../jenkins/workspace/DevOps-project/ansible/files/app/.env issue_tracker/.env
                     python3 manage.py test
                 '''
