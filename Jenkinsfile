@@ -26,7 +26,7 @@ pipeline {
                     ansible-galaxy install geerlingguy.postgresql
                 '''
                 sh '''
-                    ansible-playbook -l db01 ~/workspace/ansible-project/ansible/playbooks/postgres.yml 
+                    ansible-playbook -i ~/workspace/ansible-project/ansible/hosts.yml -l db01 ~/workspace/ansible-project/ansible/playbooks/postgres.yml 
                 '''
             }
         }
