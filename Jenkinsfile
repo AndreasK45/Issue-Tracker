@@ -31,7 +31,7 @@ pipeline {
             }
         }
 
-        stege('Deploy django') {
+        stage('Deploy django') {
             steps{
                 sh '''
                    ansible-playbook -i ~/workspace/ansible-project/ansible/hosts.yml -l app01 ~/workspace/ansible-project/ansible/playbooks/application-gunicorn-ngix.yml 
