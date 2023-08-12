@@ -20,16 +20,7 @@ pipeline {
             }
         }
 
-        stage('Deploy database') {
-            steps{
-                sh '''
-                    ansible-galaxy install geerlingguy.postgresql
-                '''
-                sh '''
-                    ansible-playbook -i ~/workspace/ansible-project/ansible/hosts.yml -l db01 ~/workspace/ansible-project/ansible/playbooks/postgres.yml 
-                '''
-            }
-        }
+        
 
         stage('Deploy django') {
             steps{
